@@ -10,6 +10,17 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
+terraform {
+  cloud {
+    organization = "gekk0"
+
+    workspaces {
+      name = "git-action"
+    }
+  }
+}
+
+
 provider "azurerm" {
   features {}
   }
